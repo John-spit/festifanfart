@@ -1,0 +1,6 @@
+# Ignore tout
+*
+
+# Inclut uniquement le dossier festifanfart_theme
+!festifanfart_theme/
+!festifanfart_theme/**
