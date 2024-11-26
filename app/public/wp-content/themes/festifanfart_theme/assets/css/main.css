@@ -1,0 +1,27 @@
+body {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* HEADER */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+}
+
+.nav ul {
+  display: flex;
+}
