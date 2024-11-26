@@ -1,6 +1,6 @@
 # Ignore tout
 *
 
-# Inclut uniquement le dossier festifanfart_theme
-!festifanfart_theme/
-!festifanfart_theme/**
+# N'ignore pas festifanfart_theme
+!app/public/wp-content/themes/festifanfart_theme/
+!app/public/wp-content/themes/festifanfart_theme/**
