@@ -3,7 +3,7 @@
 function festifanfart_enqueue_scripts() {
     wp_enqueue_style('parent', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('child', get_stylesheet_directory_uri() . '/assets/css/main.css', array('parent'), '1.0', 'all');
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap', array(), null);
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap', array(), null);
     wp_enqueue_script('jquery');
     wp_enqueue_script('script', get_stylesheet_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0', true);
 

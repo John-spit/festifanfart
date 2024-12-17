@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
 <header id="header">
-
+  <div class="header-container">
     <div class="header-logo-container">        
         <a class="logo-container" href="<?php echo home_url(); ?>">
           <img class="logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/logo-festi-bleu-lettres-blanches.png" alt="Logo de Festi Fanf'Art">
@@ -21,6 +21,11 @@
             'menu_class' => 'nav-menu',
             ));
         ?>            
-    </div>       
-    
+    </div>
+    <button id="burgerMenu" class="burger">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    </button>       
+  </div>  
 </header>
