@@ -26,12 +26,27 @@ add_action('after_setup_theme', 'festifanfart_add_menus');
 // Ajout d'un id sur un element créé du menu
 function add_menu_link_class($atts, $item, $args) {
     if ($item->title == 'Contact') {
-        $atts['id'] = 'contactBtn';
+        $atts['class'] = 'contactBtn';
         
     }
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'add_menu_link_class', 10, 3);
+
+function allow_iframes_in_acf() {
+    global $allowedposttags;
+    $allowedposttags['iframe'] = array(
+        'src'             => true,
+        'width'           => true,
+        'height'          => true,
+        'frameborder'     => true,
+        'allowfullscreen' => true,
+        'style'           => true,
+        'loading'         => true,
+        'referrerpolicy'  => true,
+    );
+}
+add_action('init', 'allow_iframes_in_acf');
 
 
 ?>

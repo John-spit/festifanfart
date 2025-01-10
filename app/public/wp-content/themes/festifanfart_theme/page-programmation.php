@@ -5,7 +5,7 @@ get_header();
 <section class="artists-section">
   <h1 class="none">Programmation</h1>
   <div class="artists-container">
-      <h2 class="artists-title">Artistes</h2>
+      <h2 class="artists-title">- Artistes -</h2>
       <div class="artists-content">
           <?php
           // Arguments de la requête personnalisée
@@ -40,7 +40,7 @@ get_header();
 
 <section class="artisans-traders-section">
   <div class="artisans-traders-container">
-      <h2 class="artisans-traders-title">Artisans et commerçant</h2>
+      <h2 class="artisans-traders-title">- Artisans et commerçant -</h2>
       <div class="artisans-traders-content">
           <?php
           // Arguments de la requête personnalisée

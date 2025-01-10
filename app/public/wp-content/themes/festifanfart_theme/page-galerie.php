@@ -4,7 +4,7 @@ get_header();
 
 <section class="photos-section">
   <div class="photos-container">
-      <h1>Galerie photo</h1>
+      <h1>- Galerie photo -</h1>
       <div class="photos-content">
           <?php
           // Arguments de la requête personnalisée
@@ -32,7 +32,7 @@ get_header();
 
 <section class="videos-section">
   <div class="videos-container">
-      <h2>Galerie vidéo</h2>
+      <h2>- Galerie vidéo -</h2>
       <div class="video-content">
           <?php
           // Arguments de la requête personnalisée
@@ -63,6 +63,19 @@ get_header();
       </div>
   </div>
 </section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <div>
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Image agrandie">
+        <video id="lightbox-video" class="lightbox-content" controls></video>
+    </div>
+    <div>
+        <a class="prev" id="prev">&#10094;</a>
+        <a class="next" id="next">&#10095;</a>
+    </div>
+</div>
 
 <?php
 get_footer();

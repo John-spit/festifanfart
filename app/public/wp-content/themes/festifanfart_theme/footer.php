@@ -1,7 +1,7 @@
 <footer>    
         <div class="footer-logos">
-            <a href="#" target="_blank"><img class="facebook-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/facebook_logo.png" alt="Logo Facebook"></a>
-            <a href="#" target="_blank"><img class="instagram-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/instagram_logo.png" alt="Logo Instagram"></a>
+            <a href="https://www.facebook.com/people/Festi-FanfArt/61571418927336/" target="_blank"><img class="facebook-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/facebook_logo.png" alt="Logo Facebook"></a>
+            <a href="https://www.instagram.com/festi_fanf_art/" target="_blank"><img class="instagram-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/instagram_logo.png" alt="Logo Instagram"></a>
         </div>
         <div class="footer-infos">
           <p class="footer-name">©2024 Festi Fanf'Art. Tous droits réservés </p>

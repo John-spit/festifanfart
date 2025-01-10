@@ -18,8 +18,9 @@ get_header();
           if ($query->have_posts()) :
               while ($query->have_posts()) : $query->the_post(); 
                     $background_hero = get_field('hero_image'); 
-                ?>
+                ?>                
                 <div class="hero-container" style="background-image: url('<?php echo esc_url($background_hero); ?>');" data-index="<?php echo $index; ?>">                                    
+                    <h2 class="none">Festi Fanf'Art festival à pouilly-sous-charlieu</h2>
                 </div>
               <?php endwhile;
               wp_reset_postdata(); // Réinitialiser les données globales de publication
@@ -32,7 +33,7 @@ get_header();
 
 <section class="a-propos"> 
   <div class="a-propos-container">
-    <h2>Qui sommes nous ?</h2>
+    <h2>- Qui sommes nous ? -</h2>
     <div class="a-propos-content">
       <div class="a-propos-text">         
       <?php
@@ -48,7 +49,7 @@ get_header();
           // Vérifier si des publications existent
           if ($query->have_posts()) :
               while ($query->have_posts()) : $query->the_post(); ?>                        
-                <p><?php $apropos = get_field('a_propos');
+                <p><span class="none">Festi Fanf'art est un festival dans la Loire, à Pouilly-sous-charlieu</span><?php $apropos = get_field('a_propos');
                           echo mb_substr($apropos, 0, 220) . '...'; // Limite à 100 caractères ?></p>                                                          
               <?php endwhile;
               wp_reset_postdata();
@@ -59,13 +60,14 @@ get_header();
         <a class="see-more" href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) ); ?>">Voir plus</a>
       </div>
       <div class="a-propos-img-container">  
-        <img class="a-propos-img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/elements_graphiques/tour-orange.png" alt="Illustration d'une cheminée d'usine à charbon">
+        <img class="a-propos-img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/elements_graphiques/dégradé-orange.png" alt="Illustration d'une cheminée d'usine à charbon">
       </div>
     </div>
   </div>
 </section>
 
 <section class="banner-program">
+    <h2 class="none">Festi Fanf'Art : Festival dans la Loire, Pouilly-sous-charlieu</h2>
     <div class="carousel-wrapper">
         <?php
         $args = array(
@@ -116,7 +118,7 @@ get_header();
 
 <section class="galery">
   <div class="galery-container">
-    <h2>Galerie</h2>
+    <h2>- Galerie -</h2>
     <div class="galery-content">
     <?php
           // Arguments de la requête personnalisée
@@ -145,18 +147,34 @@ get_header();
 </section>
 
 <section class="nous-trouver">
-  <iframe class="google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40032.373252997306!2d4.0932768558094175!3d46.1355219145956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f3f7ce409be979%3A0x59cbf8c17161aa5a!2s42720%20Pouilly-Sous-Charlieu!5e0!3m2!1sfr!2sfr!4v1733822615513!5m2!1sfr!2sfr" 
-    width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+<?php
+          // Arguments de la requête personnalisée
+          $args = array(
+              'post_type' => 'a_propos',
+              'posts_per_page' => -1,   
+          );
+
+          // Créer une nouvelle requête
+          $query = new WP_Query($args);
+
+          // Vérifier si des publications existent
+          if ($query->have_posts()) :
+              while ($query->have_posts()) : $query->the_post(); ?>                        
+                <iframe class="google-maps"<?php the_field('google_map'); ?> title="Google maps"></iframe>                                                                          
+              <?php endwhile;
+              wp_reset_postdata();
+          else :
+              echo '<p>Aucun plan trouvé.</p>';
+          endif;
+      ?>
   <div class="adress-container">
-    <p class="adress">Lorem ipsum dolor sit amet consectetur adipisicing elit, dolorem praesentium nulla!</p>
-    <a class="see-more" href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) ); ?>">Voir plus</a>    
+    <p class="adress">Toutes les conditions d'accès sont <span><a class="see-more" href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) ); ?>">ici</a></span> .</p>       
   </div>
 </section>
 
 <section class="sponsors">
   <div class="sponsors-container">
-    <h2>Sponsors et partenaires</h2>
+    <h2>- Sponsors et partenaires -</h2>
     <div class="sponsors-content">
           <?php
           // Arguments de la requête personnalisée
