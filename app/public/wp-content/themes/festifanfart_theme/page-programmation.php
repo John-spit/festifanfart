@@ -24,8 +24,13 @@ get_header();
                       <h2><span><?php the_field('nom_de_lartiste_ou_du_groupe'); ?></span></h2>
                       <div class="artist-infos">
                         <img src="<?php the_field('photo_de_lartiste_ou_du_groupe'); ?>" alt="<?php the_title(); ?>">
-                        <p><?php the_field('presentation_de_lartiste_ou_du_groupe'); ?></p>
-                      </div>                   
+                        <p><?php the_field('presentation_de_lartiste_ou_du_groupe'); ?></p>                       
+                      </div>
+                      <?php if (get_field('lien_artist')) : // Vérifie si le champ est rempli ?>
+                          <div class="lien-artist-container">
+                              <a class="lien_artist" href="<?php the_field('lien_artist'); ?>" target="_blank">Lien vers le site</a>
+                          </div>
+                      <?php endif; ?>
                   </div>
               <?php endwhile;
               wp_reset_postdata(); // Réinitialiser les données globales de publication
@@ -60,7 +65,12 @@ get_header();
                       <div class="artisans-traders-infos">
                         <img src="<?php the_field('photo'); ?>" alt="<?php the_title(); ?>">
                         <p><?php the_field('presentation_de_lartisan_ou_de_lentreprise'); ?></p>
-                      </div>                   
+                      </div> 
+                      <?php if (get_field('lien_artisan')) : // Vérifie si le champ est rempli ?>
+                          <div class="lien-artisan-container">
+                              <a class="lien_artisan" href="<?php the_field('lien_artisan'); ?>" target="_blank">Lien vers le site</a>
+                          </div>
+                      <?php endif; ?>                  
                   </div>
               <?php endwhile;
               wp_reset_postdata(); // Réinitialiser les données globales de publication

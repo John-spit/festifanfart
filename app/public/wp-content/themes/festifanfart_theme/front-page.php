@@ -27,8 +27,7 @@ get_header();
           else :
               echo '<p>Aucune photo trouvée.</p>';
           endif;
-          ?>
-    
+          ?>   
 </div>
 
 <section class="a-propos"> 
@@ -200,11 +199,6 @@ get_header();
   </div>
 
 </section>
-
-
-
-
-
 
 <?php
 

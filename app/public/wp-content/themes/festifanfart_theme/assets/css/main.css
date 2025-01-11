@@ -638,6 +638,21 @@ p {
   margin: 0 30px;
 }
 
+.lien-artist-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.lien_artist {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-decoration: underline;
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
 .artisans-traders-section {
   padding-top: 50px;
 }
@@ -689,6 +704,21 @@ p {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2), -4px -4px 6px rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0 30px;
+}
+
+.lien-artisan-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.lien_artisan {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-decoration: underline;
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
 /************************* PAGE GALERIE *************************/
